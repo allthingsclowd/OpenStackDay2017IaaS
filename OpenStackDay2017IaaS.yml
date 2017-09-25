@@ -376,3 +376,11 @@ resources:
             message: "Installation of Phaser Quest Application Tier Complete"
 
 ########################################################################################################### 
+outputs:
+  lbaas-name:
+    description: "LBaaS Name"
+    value: { get_attr: [Phaser_LBaaS, LoadBalancerName]}
+
+  lbaas-dns-url:
+    description: "LBaaS URL"
+    value: { get_attr: [Phaser_LBaaS, DNSName]}
